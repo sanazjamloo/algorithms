@@ -27,25 +27,21 @@ class LinkedList {
     // PrintList
 }
 // adds an element at the end of the list
-add(element)
-{
+add (element) {
     // creates a new node
     var node = new Node(element);
-
     // to store current node
     var current;
-
-    // if list is Empty add the element and make it head
+    // if list is Empty add the element and make it head.
+    // This takes O(1) constant time which is the best case senario.
     if (this.head == null)
         this.head = node;
     else {
         current = this.head;
-
         // iterate to the end of the list
         while (current.next) {
             current = current.next;
         }
-
         // add node
         current.next = node;
     }
@@ -53,7 +49,7 @@ add(element)
 }
 
 // insert element at the position index of the list
-insertAt(element, index) {
+insertAt (element, index) {
     if (index > 0 && index > this.size)
         return false;
     else {

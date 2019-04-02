@@ -14,19 +14,18 @@ The value of each element in nums will be in the range [-9999, 9999].*/
 // This is the iterative implementation with O(log n) logarithmic runtime.
 //The while loop causes the runtime to grow.
 
-var search = function(nums, target) {
-    var first = 0;
-    var last = nums.length - 1;
-    while (first <= last) {
-      // the midpoint is being calculated inside the while loop.
-        var mid = first + Math.floor((last - first) / 2);
-        if (nums[mid] === target) {
+function binarySearch(array, key) {
+    let left = 0;
+    let right = array.length - 1;
+    while (left <= right) {
+        const mid = left + Math.floor((right - left) / 2);
+        if (array[mid] === key) {
             return mid;
         }
-        elseif (nums[mid] < target) {
-            first = mid + 1;
+        if (arr[mid] < key) {
+            left = mid + 1;
         } else {
-            last = mid - 1;
+            right = mid - 1;
         }
     }
     return -1;

@@ -14,7 +14,6 @@ class LinkedList {
         this.head = null;
         this.size = 0;
     }
-
     // functions to be implemented
     // add(element)
     // insertAt(element, location)

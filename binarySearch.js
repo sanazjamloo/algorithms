@@ -14,7 +14,7 @@ The value of each element in nums will be in the range [-9999, 9999].*/
 // This is the iterative implementation with O(log n) logarithmic runtime.
 //The while loop causes the runtime to grow.
 
-function binarySearch(array, key) {
+function binarySearch (array, key) {
     let left = 0;
     let right = array.length - 1;
     while (left <= right) {
